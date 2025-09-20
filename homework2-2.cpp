@@ -58,32 +58,58 @@ void fillStudentRecord(StudentStruct *students, int *numOfStudent) {
 
 /* Return student ID */
 int findBestStudentInMidterm(StudentStruct* students, int numOfStudent) {
-    /* TODO */
-    return 1001;
+    if (numOfStudent == 0) return -1;
+    int bestIdx = 0;
+    for (int i = 1; i < numOfStudent; ++i) {
+        if (students[i].record.midterm > students[bestIdx].record.midterm) {
+            bestIdx = i;
+        }
+    }
+    return students[bestIdx].id;
 }
 
 /* Return student ID */
 int findBestStudentInFinal(StudentStruct* students, int numOfStudent) {
-    /* TODO */
-    return 1001;
+    if (numOfStudent == 0) return -1;
+    int bestIdx = 0;
+    for (int i = 1; i < numOfStudent; ++i) {
+        if (students[i].record.final > students[bestIdx].record.final) {
+            bestIdx = i;
+        }
+    }
+    return students[bestIdx].id;
 }
 
 /* Return student ID */
 int findBestStudent(StudentStruct* students, int numOfStudent) {
-    /* TODO */
-    return 1001;
+    if (numOfStudent == 0) return -1;
+    int bestIdx = 0;
+    float bestAvg = (students[0].record.midterm + students[0].record.final) / 2.0f;
+    for (int i = 1; i < numOfStudent; ++i) {
+        float avg = (students[i].record.midterm + students[i].record.final) / 2.0f;
+        if (avg > bestAvg) {
+            bestAvg = avg;
+            bestIdx = i;
+        }
+    }
+    return students[bestIdx].id;
 }
 
 /* Return Index */
 int findStudentByStudentID(StudentStruct* students, int numOfStudent, int id) {
-    /* TODO */
-    return -1;
+    for (int i = 0; i < numOfStudent; ++i) {
+        if (students[i].id == id) {
+            return i; 
+        }
+    }
+    return -1; 
 }
 
 void modifyRecord(StudentStruct *students, int numOfStudent, const StudentStruct& student) {
     int idx = findStudentByStudentID(students, numOfStudent, student.id);
     if (idx >= 0) {
-        /* TODO */
+        students[idx].name = student.name;
+        students[idx].record = student.record;
     }
 }
 
@@ -91,7 +117,12 @@ void addStudent(StudentStruct *students, int *numOfStudent, const char* name, in
     int idx = findStudentByStudentID(students, *numOfStudent, id);
     if (idx < 0) {
         ++(*numOfStudent);
-        /* TODO */
+        StudentStruct* newStudent = &students[*numOfStudent - 1];
+        strncpy(newStudent->name, name, sizeof(newStudent->name) - 1);
+        newStudent->name[sizeof(newStudent->name) - 1] = '\0';
+        newStudent->id = id;
+        newStudent->record.midterm = midterm;
+        newStudent->record.final = final;
     }
 }
 
@@ -99,23 +130,37 @@ void deleteStudent(StudentStruct* students, int *numOfStudent, int id) {
     int idx = findStudentByStudentID(students, *numOfStudent, id);
     if (idx >= 0) {
         --(*numOfStudent);
-        /* TODO */
+        for (int i = idx; i < *numOfStudent; ++i) {
+            students[i] = students[i + 1];
+        }
     }
 }
 
 float getMidtermAverage(StudentStruct* students, int numOfStudent) {
-    /* TODO */
-    return 0.0f;
+    if (numOfStudent == 0) return 0.0f;
+    float sum = 0.0f;
+    for (int i = 0; i < numOfStudent; ++i) {
+        sum += students[i].record.midterm;
+    }
+    return sum / numOfStudent;
 }
 
 float getFinalAverage(StudentStruct* students, int numOfStudent) {
-    /* TODO */
-    return 0.0f;
+    if (numOfStudent == 0) return 0.0f;
+    float sum = 0.0f;
+    for (int i = 0; i < numOfStudent; ++i) {
+        sum += students[i].record.final;
+    }
+    return sum / numOfStudent;
 }
 
 float getTotalAverage(StudentStruct* students, int numOfStudent) {
-    /* TODO */
-    return 0.0f;
+    if (numOfStudent == 0) return 0.0f;
+    float sum = 0.0f;
+    for (int i = 0; i < numOfStudent; ++i) {
+        sum += (students[i].record.midterm + students[i].record.final) / 2.0f;
+    }
+    return sum / numOfStudent;
 }
 
 void printStudentInfo(StudentStruct* students, int numOfStudent, int id) {
@@ -125,5 +170,3 @@ void printStudentInfo(StudentStruct* students, int numOfStudent, int id) {
                   << ", ID: " << students[idx].id << std::endl;
     }
 }
-
-
