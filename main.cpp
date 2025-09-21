@@ -98,6 +98,12 @@ void doTest3(){
     std::cout << "---------------------------" << std::endl;
     std::cout << "Test 3" << std::endl;
 
+    const int MAX_STUDENTS = 100;
+    delete[] students; // test2에서 만든 데이터 삭제
+    students = new StudentStruct[MAX_STUDENTS];
+    numOfStudent = 0;
+    fillStudentRecord(students, &numOfStudent); 
+
     deleteStudent(students, &numOfStudent, 1011);
     deleteStudent(students, &numOfStudent, 1029);
 
@@ -107,7 +113,6 @@ void doTest3(){
 void doPointerTest(int select){
     const int MAX_STUDENTS = 100;
     students = new StudentStruct[MAX_STUDENTS];
-    student = nullptr;
     numOfStudent = 0;
     fillStudentRecord(students, &numOfStudent);
 
@@ -127,10 +132,6 @@ void doPointerTest(int select){
         default:
             doTest1();
             doTest2();
-            students = new StudentStruct[MAX_STUDENTS];
-            student = nullptr;
-            numOfStudent = 0;
-            fillStudentRecord(students, &numOfStudent);
             doTest3();
             break;
     }
