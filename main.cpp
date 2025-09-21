@@ -34,8 +34,8 @@ void printAverage()
 }
 
 void printStudentList(){
-    for(int id = 1000; id < 1100; ++id){
-        printStudentInfo(students, numOfStudent, id);
+    for(int i = 0; i < numOfStudent; ++i){
+        printStudentInfo(students, numOfStudent, students[i].id);
     }
 }
 
@@ -43,7 +43,7 @@ void doNamespaceTest(){
     cout << "---------------------------" << endl;
     cout << "Namespace Test" << endl;
 
-    // 정수형 계산기 테스트s
+    // 정수형 계산기 테스트
     cout << "[IntCalc] 10 + 3 = " << IntCalc::add(10, 3) << endl;
     cout << "[IntCalc] 10 - 3 = " << IntCalc::subtract(10, 3) << endl;
     cout << "[IntCalc] 10 * 3 = " << IntCalc::multiply(10, 3) << endl;
@@ -80,8 +80,9 @@ void doTest2(){
     cout << "Test 2" << endl;
 
     StudentStruct charlie("Charlie", 1003, 70, 99.0);
+
+
     int idx = -1;
-    idx = findStudentByStudentID(students, numOfStudent, charlie.id);
 
     if(idx >= 0)
         modifyRecord(students, numOfStudent, charlie);
@@ -89,6 +90,7 @@ void doTest2(){
     addStudent(students, &numOfStudent, "Ana", 1051, 88, 65);
     addStudent(students, &numOfStudent, "Suji", 1052, 90, 93);
     addStudent(students, &numOfStudent, "Zhang", 1053, 100, 40);
+    
 
     printBestStudent();
     printAverage();
@@ -98,24 +100,17 @@ void doTest3(){
     std::cout << "---------------------------" << std::endl;
     std::cout << "Test 3" << std::endl;
 
-    deleteStudent(students, &numOfStudent, 1051);
-    deleteStudent(students, &numOfStudent, 1052);
-    deleteStudent(students, &numOfStudent, 1053);
-
     deleteStudent(students, &numOfStudent, 1011);
     deleteStudent(students, &numOfStudent, 1029);
 
     printStudentList();
 }
 
-void doPointerTest(int select){
+void doPointerTest(int select) {
     const int MAX_STUDENTS = 100;
-    students = new StudentStruct[MAX_STUDENTS];
+    students = new StudentStruct[MAX_STUDENTS]();
     numOfStudent = 0;
     fillStudentRecord(students, &numOfStudent);
-
-    if(students == nullptr)
-        return;
 
     switch(select){
         case 2:
@@ -133,6 +128,7 @@ void doPointerTest(int select){
             doTest3();
             break;
     }
+
     delete[] students;
 }
 int main(int argc, char **argv) {

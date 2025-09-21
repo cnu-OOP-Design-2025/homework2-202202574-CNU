@@ -58,7 +58,7 @@ void fillStudentRecord(StudentStruct *students, int *numOfStudent) {
 
 /* Return student ID */
 int findBestStudentInMidterm(StudentStruct* students, int numOfStudent) {
-    if (numOfStudent == 0) return 1001;
+    if (numOfStudent == 0) return -1;
     int bestIdx = 0;
     for (int i = 1; i < numOfStudent; ++i) {
         if (students[i].record.midterm > students[bestIdx].record.midterm) {
@@ -70,7 +70,7 @@ int findBestStudentInMidterm(StudentStruct* students, int numOfStudent) {
 
 /* Return student ID */
 int findBestStudentInFinal(StudentStruct* students, int numOfStudent) {
-    if (numOfStudent == 0) return 1001;
+    if (numOfStudent == 0) return -1;
     int bestIdx = 0;
     for (int i = 1; i < numOfStudent; ++i) {
         if (students[i].record.final > students[bestIdx].record.final) {
@@ -82,7 +82,7 @@ int findBestStudentInFinal(StudentStruct* students, int numOfStudent) {
 
 /* Return student ID */
 int findBestStudent(StudentStruct* students, int numOfStudent) {
-    if (numOfStudent == 0) return 1001;
+    if (numOfStudent == 0) return -1;
     int bestIdx = 0;
     float bestAvg = (students[0].record.midterm + students[0].record.final) / 2.0f;
     for (int i = 1; i < numOfStudent; ++i) {
@@ -99,17 +99,16 @@ int findBestStudent(StudentStruct* students, int numOfStudent) {
 int findStudentByStudentID(StudentStruct* students, int numOfStudent, int id) {
     for (int i = 0; i < numOfStudent; ++i) {
         if (students[i].id == id) {
-            return i; 
+            return i;
         }
     }
-    return -1; 
+    return -1;
 }
 
 void modifyRecord(StudentStruct *students, int numOfStudent, const StudentStruct& student) {
     int idx = findStudentByStudentID(students, numOfStudent, student.id);
     if (idx >= 0) {
-        students[idx].name = student.name;
-        students[idx].record = student.record;
+        students[idx] = student;
     }
 }
 
@@ -134,7 +133,6 @@ void deleteStudent(StudentStruct* students, int *numOfStudent, int id) {
         }
     }
 }
-
 
 float getMidtermAverage(StudentStruct* students, int numOfStudent) {
     if (numOfStudent == 0) return 0.0f;
@@ -166,7 +164,7 @@ float getTotalAverage(StudentStruct* students, int numOfStudent) {
 void printStudentInfo(StudentStruct* students, int numOfStudent, int id) {
     int idx = findStudentByStudentID(students, numOfStudent, id);
     if (idx >= 0) {
-        std::cout << "Name: " << students[idx].name 
+        std::cout << "Name: " << students[idx].name
                   << ", ID: " << students[idx].id << std::endl;
     }
 }
