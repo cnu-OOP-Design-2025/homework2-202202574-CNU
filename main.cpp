@@ -98,11 +98,9 @@ void doTest3(){
     std::cout << "---------------------------" << std::endl;
     std::cout << "Test 3" << std::endl;
 
-    const int MAX_STUDENTS = 100;
-    delete[] students; // test2에서 만든 데이터 삭제
-    students = new StudentStruct[MAX_STUDENTS];
-    numOfStudent = 0;
-    fillStudentRecord(students, &numOfStudent); 
+    deleteStudent(students, &numOfStudent, 1051);
+    deleteStudent(students, &numOfStudent, 1052);
+    deleteStudent(students, &numOfStudent, 1053);
 
     deleteStudent(students, &numOfStudent, 1011);
     deleteStudent(students, &numOfStudent, 1029);

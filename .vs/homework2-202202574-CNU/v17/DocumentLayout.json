@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\maine\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\c\u002B\u002B\\homework2-202202574-CNU\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maine\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\c\u002B\u002B\\homework2-202202574-CNU\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maine\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\c\u002B\u002B\\homework2-202202574-CNU\\test2.bat||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:test2.bat||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maine\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\c\u002B\u002B\\homework2-202202574-CNU\\main.exe||{177559E0-D141-11D0-92DF-00A0C9138C45}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:main.exe||{177559E0-D141-11D0-92DF-00A0C9138C45}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maine\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\c\u002B\u002B\\homework2-202202574-CNU\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maine\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\c\u002B\u002B\\homework2-202202574-CNU\\test2.bat||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:test2.bat||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,30 +31,43 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\maine\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\c\u002B\u002B\\homework2-202202574-CNU\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Users\\maine\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\c\u002B\u002B\\homework2-202202574-CNU\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-09-21T11:04:05.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "main.exe",
               "DocumentMoniker": "C:\\Users\\maine\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\c\u002B\u002B\\homework2-202202574-CNU\\main.exe",
               "RelativeDocumentMoniker": "main.exe",
               "ToolTip": "C:\\Users\\maine\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\c\u002B\u002B\\homework2-202202574-CNU\\main.exe",
               "RelativeToolTip": "main.exe",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000165|",
-              "WhenOpened": "2025-09-21T10:13:13.619Z"
+              "WhenOpened": "2025-09-21T11:02:37.245Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\maine\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\c\u002B\u002B\\homework2-202202574-CNU\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Users\\maine\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\c\u002B\u002B\\homework2-202202574-CNU\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAAAHsAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAAAFoAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-09-21T10:06:12.481Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "test2.bat",
               "DocumentMoniker": "C:\\Users\\maine\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\c\u002B\u002B\\homework2-202202574-CNU\\test2.bat",
               "RelativeDocumentMoniker": "test2.bat",
@@ -58,7 +75,8 @@
               "RelativeToolTip": "test2.bat",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMWSURBVFhH7ZNdTFNnGMd/Na1FEi1QRGWrKAEU0fkJuKIO/CBRg9miiVHULPNiWTKdE02H2aJm2WZi4seNF9565cVmjF\u002BJ0S1RTJCqCIEWxKVMTUC\u002BsrW0tTvve7oLEPUtsQe71Av93ZzkeZ7/\u002B/7OeXLgbRKNRtXSe5KOqda17ziwR20kiRPjknH5\u002BqpPR30Ce0y1rn3Rwz/\u002B/GI6iRz84QDj1GKyGbOA5\u002BFfXPqjnmu37qIJobbHjCEBIQT\u002BwRAAXU/7kVISDIboG/gHTRP09P\u002BtRgxjSOCmu4UbDU1cr7vLYDCIlBIpJQ2NrVy8XsfvdQ309A2oMUPEFejuHSAYCqFLSSAYQuoSfVjg2b8RIpEIui7xdvjUqCHiCtjTJzHZnoaQEikFUzPtbKhcTvH8QqQYEplgtTKvME\u002BNGiKugMVsZlbu9JG3njbFjsVsZoYje2QVkzPTyEizqVFDxBUIhp5xy92ElBJdlzR7HuDt8OG\u002B34Iuh9bR/rCT1vYONWqI\u002BALhMIHBILo\u002B9Lb\u002BwCDu\u002By20tv\u002BJHK7puqT3Df\u002BEuAJZ9nSKCnJJsVqZ6cgeWoUQ6FKSZpuI44OppKakMKcgl9uNTTzp6laPeC1xBQDmFebx2doKnMULsE2aOLL7jxd/RGV5GdWbqvA9esyZs79y7NRpAEKhsHrMqJjVQjwWzp2N7/ETonqUaVOyOHflKrfvNCKlQGgakXCYg78cpbenF9fe3eQ4PlSPeAVDX\u002BBlchzZlDtLqFhWCkC9\u002Bx6BQIDxFgs7Nm9k6ZKF\u002BDo78fv9eLxtajyGMQuo7KzejBAapYsW4CxZws7tW0m32SjIz2Vt5Wp1PIaEBc7\u002Bdh6haXjb2unr78fjbaO7q4vmpmYuXL6sjseQsIB1vAWpabS0ethV4\u002BLwT0eQQkMIQeqEVHU8hoQFvti2Bde3u1mz8pPhizUOfX\u002BA2v01rKooV8djSFgg055B4ax8VpQ5WVHm5PPt1cwtmkNpSbE6OioJCzxnRs50vv7qS6rWr1Nbr\u002BV/E3hTTN\u002B5ak6YMH2jNpJBFNNJtfaed4//ABT7UiQdcg0aAAAAAElFTkSuQmCC",
-              "WhenOpened": "2025-09-21T10:04:27.341Z"
+              "WhenOpened": "2025-09-21T10:04:27.341Z",
+              "EditorCaption": ""
             }
           ]
         }
