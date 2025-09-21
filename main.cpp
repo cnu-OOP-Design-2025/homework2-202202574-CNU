@@ -80,8 +80,8 @@ void doTest2(){
     cout << "Test 2" << endl;
 
     StudentStruct charlie("Charlie", 1003, 70, 99.0);
-
-    int idx = findStudentByStudentID(students, numOfStudent, charlie.id);
+    int idx = -1;
+    idx = findStudentByStudentID(students, numOfStudent, charlie.id);
 
     if(idx >= 0)
         modifyRecord(students, numOfStudent, charlie);

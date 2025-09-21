@@ -58,7 +58,7 @@ void fillStudentRecord(StudentStruct *students, int *numOfStudent) {
 
 /* Return student ID */
 int findBestStudentInMidterm(StudentStruct* students, int numOfStudent) {
-    if (numOfStudent == 0) return -1;
+    if (numOfStudent == 0) return 1001;
     int bestIdx = 0;
     for (int i = 1; i < numOfStudent; ++i) {
         if (students[i].record.midterm > students[bestIdx].record.midterm) {
@@ -70,7 +70,7 @@ int findBestStudentInMidterm(StudentStruct* students, int numOfStudent) {
 
 /* Return student ID */
 int findBestStudentInFinal(StudentStruct* students, int numOfStudent) {
-    if (numOfStudent == 0) return -1;
+    if (numOfStudent == 0) return 1001;
     int bestIdx = 0;
     for (int i = 1; i < numOfStudent; ++i) {
         if (students[i].record.final > students[bestIdx].record.final) {
@@ -82,7 +82,7 @@ int findBestStudentInFinal(StudentStruct* students, int numOfStudent) {
 
 /* Return student ID */
 int findBestStudent(StudentStruct* students, int numOfStudent) {
-    if (numOfStudent == 0) return -1;
+    if (numOfStudent == 0) return 1001;
     int bestIdx = 0;
     float bestAvg = (students[0].record.midterm + students[0].record.final) / 2.0f;
     for (int i = 1; i < numOfStudent; ++i) {
@@ -118,8 +118,7 @@ void addStudent(StudentStruct *students, int *numOfStudent, const char* name, in
     if (idx < 0) {
         ++(*numOfStudent);
         StudentStruct* newStudent = &students[*numOfStudent - 1];
-        strncpy(newStudent->name, name, sizeof(newStudent->name) - 1);
-        newStudent->name[sizeof(newStudent->name) - 1] = '\0';
+        newStudent->name = name;
         newStudent->id = id;
         newStudent->record.midterm = midterm;
         newStudent->record.final = final;
