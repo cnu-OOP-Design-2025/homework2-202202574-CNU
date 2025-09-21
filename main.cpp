@@ -29,8 +29,8 @@ void printAverage()
 
     cout << "# of Student: " << numOfStudent << endl;
     cout << "Midterm Average: " << midtermAvg << endl;
-    cout << "Final Average: " << finalAvg << endl;
-    cout << "Total Average: " << totalAvg << endl;
+    cout << "Midterm Average: " << finalAvg << endl;
+    cout << "Midterm Average: " << totalAvg << endl;
 }
 
 void printStudentList(){
@@ -86,7 +86,7 @@ void doTest2(){
     idx=findStudentByStudentID(students, numOfStudent, charlie.id);
 
     if(idx >= 0)
-        modifyRecord(students, numOfStudent, charlie.id);
+        modifyRecord(students, numOfStudent, charlie);
 
     addStudent(students, &numOfStudent, "Ana", 1051, 88, 65);
     addStudent(students, &numOfStudent, "Suji", 1052, 90, 93);
